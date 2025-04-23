@@ -1,4 +1,3 @@
-
 class GestionEjemplares:
     def __init__(self):
         self.ejemplares = {}
@@ -11,9 +10,9 @@ class GestionEjemplares:
                 "ano": ano,
                 "categoria": categoria
             }
-            print(f"✅ Ejemplar '{titulo}' agregado exitosamente.")
+            print(f" Ejemplar '{titulo}' agregado exitosamente.")
         else:
-            print("❌ El código del ejemplar ya existe.")
+            print(" El código del ejemplar ya existe.")
 
     def editar_ejemplar(self, codigo, nuevo_titulo=None, nuevo_autor=None, nuevo_ano=None, nueva_categoria=None):
         ejemplar = self.ejemplares.get(codigo)
@@ -26,16 +25,16 @@ class GestionEjemplares:
                 ejemplar["ano"] = nuevo_ano
             if nueva_categoria:
                 ejemplar["categoria"] = nueva_categoria
-            print(f"✅ Ejemplar '{codigo}' editado exitosamente.")
+            print(f" Ejemplar '{codigo}' editado exitosamente.")
         else:
-            print("❌ Ejemplar no encontrado.")
+            print(" Ejemplar no encontrado.")
 
     def eliminar_ejemplar(self, codigo):
         if codigo in self.ejemplares:
             del self.ejemplares[codigo]
-            print(f"✅ Ejemplar '{codigo}' eliminado exitosamente.")
+            print(f" Ejemplar '{codigo}' eliminado exitosamente.")
         else:
-            print("❌ El ejemplar no existe.")
+            print(" El ejemplar no existe.")
 
     def listar_ejemplares(self):
         if not self.ejemplares:

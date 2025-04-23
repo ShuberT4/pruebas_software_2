@@ -1,10 +1,9 @@
-# main.py
-from prestamos_reservas import PrestamosReservas
-from gestor_usuario import GestionUsuarios
-from catalogo_recursos import CatalogoRecursos
-from gestion_ejemplares import GestionEjemplares
-from panel_administrativo import PanelAdministrativo
 
+from src.prestamos_reservas import PrestamosReservas
+from src.gestor_usuario import GestionUsuarios
+from src.catalogo_recursos import CatalogoRecursos
+from src.gestion_ejemplares import GestionEjemplares
+from src.panel_administrativo import PanelAdministrativo
 
 def menu_usuarios(gestor):
     while True:
@@ -90,8 +89,7 @@ def menu_principal():
             menu_panel_administrativo(panel_admin)
         elif opcion == "6":
             print("Saliendo del sistema")
-            break
-        
+            break     
 
 if __name__ == "__main__":
     menu_principal()
